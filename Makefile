@@ -1,4 +1,4 @@
-# Makefile for CrptVowels
+# Makefile for cryptvowels.c
 
 CCOPT =
 LDOPT =
@@ -19,21 +19,20 @@ endif
 
 LIBS= 
 
-CHESS-SRVEXEC=crptvowels
+CRPTVOWELS-EXEC=crptvowels
 
 OBJS += \
-  CrptVowels.o 
-
+  cryptvowels.o 
 
 crptvowels: $(OBJS)
-	$(CC) $(LDOPT) -o $(CHESS-SRVEXEC) $(OBJS) $(LIBS)
+	$(CC) $(LDOPT) -o $(CRPTVOWELS-EXEC) $(OBJS) $(LIBS)
 
-all: clean $(CHESS-SRVEXEC)
+all: clean $(CRPTVOWELS-EXEC)
 
-fake: $(CHESS-SRVEXEC)
+fake: $(CRPTVOWELS-EXEC)
 
 clean:
-	rm -f $(OBJS) $(CHESS-SRVEXEC)
+	rm -f $(OBJS) $(CRPTVOWELS-EXEC)
 
 
 %.o: %.c
